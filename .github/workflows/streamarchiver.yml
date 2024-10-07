@@ -36,8 +36,8 @@ jobs:
         id: upload
         if: steps.restore-cache.outputs.cache-hit == 'true' && (hashFiles('*.mp4') != '' || hashFiles('*.mkv') != '')
         env:
-          accesskey: ${{secrets.ACCESS_KEY}}
-          secret: ${{secrets.SECRET}}
+          accesskey: ${{secrets.9pmMHe7KRZDUrmzz}}
+          secret: ${{secrets.LuGpc7zTUBIpXsXH}}
           bucketname: infrared-vods
         run: |
           file=$(find -type f -name "*.mp4" -or -type f -name "*.mkv");
