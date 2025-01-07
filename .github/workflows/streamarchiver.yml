@@ -75,7 +75,7 @@ jobs:
 
       - name: Download livestream
         env:
-          channelid: @LolcowQueens
+          channelid: UCOzrx6iM9qQ4lIzf7BbkuCQ
         if: steps.predownload.outcome == 'success'
         continue-on-error: true
         run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
