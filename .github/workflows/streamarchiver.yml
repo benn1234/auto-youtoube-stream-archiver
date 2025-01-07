@@ -37,7 +37,7 @@ jobs:
         if: steps.restore-cache.outputs.cache-hit == 'true' && (hashFiles('*.mp4') != '' || hashFiles('*.mkv') != '')
         env:
           accesskey: ${{secrets.9pmMHe7KRZDUrmzz}}
-          secret: ${{secrets.LuGpc7zTUBIpXsXH}}
+          secret: ${{secrets.6VeChZqdWd9DhTiA}}
           bucketname: infrared-vods
         run: |
           file=$(find -type f -name "*.mp4" -or -type f -name "*.mkv");
@@ -75,7 +75,7 @@ jobs:
 
       - name: Download livestream
         env:
-          channelid: InfraredShow
+          channelid: @LolcowQueens
         if: steps.predownload.outcome == 'success'
         continue-on-error: true
         run: yt-dlp https://www.youtube.com/c/"$channelid"/live --live-from-start
